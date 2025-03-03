@@ -1,18 +1,10 @@
-import { Toaster } from "@workspace/ui/components/sonner";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
-import { Geist, Geist_Mono } from "next/font/google";
-import Nav from "./nav";
+import { Josefin_Sans } from "next/font/google";
 import { Providers } from "./Providers";
 
-const fontSans = Geist({
+const fontJosefinSans = Josefin_Sans({
   subsets: ["latin"],
-  variable: "--font-sans",
-});
-
-const fontMono = Geist_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
 });
 
 export default async function BaseLayout({
@@ -29,14 +21,10 @@ export default async function BaseLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <body
-        className={`${fontSans.variable} ${fontMono.variable} font-sans antialiased`}
+        className={`${fontJosefinSans.className} font-sans antialiased flex flex-col min-h-screen`}
       >
         <NextIntlClientProvider messages={messages}>
-          <Toaster />
-          <Providers>
-            <Nav />
-            {children}
-          </Providers>
+          <Providers>{children}</Providers>
         </NextIntlClientProvider>
       </body>
     </html>

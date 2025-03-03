@@ -7,5 +7,18 @@
     "description": "Sorry, we couldn’t find the page you’re looking for.",
     "back": "Go back home",
     "support": "Contact support"
+  },
+  "Form": {
+    "error-required": "This field is required.",
+    "error-firstName": "First Name is not valid.",
+    "error-lasttName": "Last Name is not valid.",
+    "error-dateOfBirth": "You must be between 18 and 65 years old to proceed!",
+    "error-addressLine1": "Address Line 1 is not valid.",
+    "error-addressLine2": "Address Line 2 is not valid.",
+    "error-city": "City is not valid.",
+    "error-idNumber": "Identity number is not valid.",
+    "error-phone": "Phone number is not valid.",
+    "error-amount": "Amount is not valid.",
+    "error-topup-min": "A minimum of {min} USDT / USDC is required to topup your card."
   }
 }

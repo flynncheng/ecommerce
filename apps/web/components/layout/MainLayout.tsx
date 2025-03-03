@@ -1,4 +1,7 @@
-"use client";
+import { Toaster } from "sonner";
+import Footer from "./footer";
+import Nav from "./nav";
+import Header from "./header";
 
 type Props = {
   children?: React.ReactNode;
@@ -6,8 +9,12 @@ type Props = {
 
 export default function MainLayout({ children }: Props) {
   return (
-    <main className="w-full flex flex-col px-6 pb-12 max-w-md mx-auto">
-      {children}
-    </main>
+    <>
+      <Header />
+      <Nav />
+      <main className="flex-auto">{children}</main>
+      <Toaster />
+      <Footer />
+    </>
   );
 }

@@ -21,7 +21,7 @@ export default function NotFoundPage() {
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <Button asChild>
-              <Link href="/card">{t("back")}</Link>
+              <Link href="/">{t("back")}</Link>
             </Button>
             <Button asChild variant="ghost">
               <a href={`mailto:${appConfig.client.email?.toLowerCase()}`}>

@@ -1,5 +1,10 @@
-import React from "react";
+import HomeTemplate from "@/components/home";
+import { listCollections } from "@/lib/data/collections";
 
-export default function page() {
-  return <div>page</div>;
+export default async function Home() {
+  const { collections } = await listCollections({
+    fields: "*products",
+  });
+
+  return <HomeTemplate collections={collections} />;
 }

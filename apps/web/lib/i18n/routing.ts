@@ -1,11 +1,11 @@
 import { createNavigation } from "next-intl/navigation";
 import { defineRouting } from "next-intl/routing";
 
-const locales = ["en", "zh-CN", "zh-TW"] as const;
+const locales = ["ca", "cn"] as const;
 
 export const routing = defineRouting({
   locales: locales,
-  defaultLocale: "en",
+  defaultLocale: "ca",
 });
 
 export type Locale = (typeof routing.locales)[number];
